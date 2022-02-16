@@ -1,2 +1,7 @@
-# RobofriendswithRedux
-Adding Redux library to the React library of the RoboFriends app
+# robofriends
+Tutorial for React
+To run the project:
+
+1. Clone this repo
+2. Run `npm install`
+3. Run `npm start`
