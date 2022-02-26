@@ -6,6 +6,7 @@ import Scroll from '../components/Scroll';
 import './App.css';
 import {setSearchField, requestRobots} from '../actions';
 import Header from '../components/Header';
+import CounterButton from '../components/CounterButton'
 
 const mapStateToProps =state=>{
   return{
@@ -36,6 +37,7 @@ class App extends Component {
     return (
       <div className='tc'>
       <Header/>
+      <CounterButton color={'red'}/>
       <SearchBox searchChange={onSearchChange}/>
       <Scroll>
         {isPending ?
