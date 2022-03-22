@@ -1,6 +1,6 @@
 version: 2.1
 jobs:
-  build:
+  bobby:
     docker:
       - image: alpine:3.7
     steps:
@@ -9,3 +9,17 @@ jobs:
           command: |
             echo 'Hello World!'
             echo 'This is the delivery pipeline'
+  sally:
+    docker:
+      - image: alpine:3.7
+    steps:
+      - run:
+          name: The First Step
+          command: |
+            echo 'Hello World!'
+            echo 'This is the delivery pipeline'
+workflows:
+    bobby_sally:
+      jobs:
+        - bobby
+        - sally
