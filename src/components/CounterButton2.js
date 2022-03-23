@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-class CounterButton extends Component {
+class CounterButton2 extends Component {
   constructor() {
     super();
     this.state = {
@@ -12,7 +12,9 @@ class CounterButton extends Component {
     if (this.state.count !== nextState.count) {
       return true;
     }
-    return false;
+    return;
+
+    false;
   }
 
   updateCount = () => {
@@ -34,4 +36,4 @@ class CounterButton extends Component {
   }
 }
 
-export default CounterButton;
+export default CounterButton2;
