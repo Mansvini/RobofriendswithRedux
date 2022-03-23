@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-class CounterButton2 extends Component {
+class CounterButton extends Component {
   constructor() {
     super();
     this.state = {
@@ -38,4 +38,4 @@ class CounterButton2 extends Component {
   }
 }
 
-export default CounterButton2;
+export default CounterButton;
