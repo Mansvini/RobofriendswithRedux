@@ -2,7 +2,8 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: circleci/node:latest
+      - image: alpine:3.7
+    <<: *defaults
     steps:
       - run:
           name: npm building
@@ -11,7 +12,7 @@ jobs:
             CI=true npm run build
   test:
     docker:
-      - image: circleci/node:latest
+      - image: alpine:3.7
     steps:
       - run:
           name: npm testing
@@ -20,7 +21,7 @@ jobs:
             npm run test
   hithere:
     docker:
-      - image: circleci/node:latest
+      - image: alpine:3.7
     steps:
       - run:
           name: useless
