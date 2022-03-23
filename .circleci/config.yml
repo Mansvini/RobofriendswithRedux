@@ -1,9 +1,9 @@
 version: 2.1
 jobs:
   build:
+    <<: *defaults
     docker:
       - image: alpine:3.7
-    <<: *defaults
     steps:
       - run:
           name: npm building
