@@ -1,25 +1,30 @@
-version: 2.1
+version: 2.1 
 jobs:
-  bobby:
-    docker:
-      - image: alpine:3.7
-    steps:
-      - run:
-          name: The First Step
-          command: |
-            echo 'Hello World!'
-            echo 'This is the delivery pipeline'
-  sally:
-    docker:
-      - image: alpine:3.7
-    steps:
-      - run:
-          name: The First Step
-          command: |
-            echo 'Hello World!'
-            echo 'This is the delivery pipeline'
+   build:
+     docker:
+       - image: circleci/node:latest
+     steps:
+       - checkout
+       - run: npm install
+       - run: CI=true npm run build
+   test:
+     docker:
+       - image: circleci/node:latest
+     steps:
+       - checkout
+       - run: npm install
+       - run: npm run test
+   hithere:
+     docker:
+       - image: circleci/node:latest
+     steps:
+       - checkout
+       - run: echo "Hellloooo!"
 workflows:
-    bobby_sally:
-      jobs:
-        - bobby
-        - sally
+  build-test-and-lint:
+    jobs:
+      - build
+      - hithere
+      - test:
+          requires:
+            - hithere
