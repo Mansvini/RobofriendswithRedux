@@ -1,25 +1,36 @@
 version: 2.1
 jobs:
-  bobby:
+  build:
     docker:
       - image: alpine:3.7
     steps:
       - run:
-          name: The First Step
+          name: npm building
           command: |
-            echo 'Hello World!'
-            echo 'This is the delivery pipeline'
-  sally:
+            npm install
+            CI=true npm run build
+  test:
     docker:
       - image: alpine:3.7
     steps:
       - run:
-          name: The First Step
+          name: npm testing
           command: |
-            echo 'Hello World!'
-            echo 'This is the delivery pipeline'
+            npm install
+            npm run test
+  hithere:
+    docker:
+      - image: alpine:3.7
+    steps:
+      - run:
+          name: useless
+          command: |
+            echo "heloooo"
 workflows:
-    bobby_sally:
+    build_test_and_lint:
       jobs:
-        - bobby
-        - sally
+        - build
+        - hithere
+        - test:
+            requires:
+              - hithere
