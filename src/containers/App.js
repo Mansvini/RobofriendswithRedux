@@ -38,8 +38,8 @@ class App extends Component {
     return (
       <div className="tc">
         <Header />
-        <CounterButton color={"red"} />
-        <CounterButton2 color={"red"} />
+        {/* <CounterButton color={"red"} />
+        <CounterButton2 color={"red"} /> */}
         <SearchBox searchChange={onSearchChange} />
         <Scroll>
           {isPending ? <h1>Loading</h1> : <CardList robots={filteredRobots} />}
