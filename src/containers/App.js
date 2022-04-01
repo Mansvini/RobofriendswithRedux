@@ -6,8 +6,9 @@ import Scroll from "../components/Scroll";
 import "./App.css";
 import { setSearchField, requestRobots } from "../actions";
 import Header from "../components/Header";
-import CounterButton from "../components/CounterButton";
-import CounterButton2 from "../components/CounterButton2";
+import "./gh-fork-ribbon.css";
+// import CounterButton from "../components/CounterButton";
+// import CounterButton2 from "../components/CounterButton2";
 
 const mapStateToProps = (state) => {
   return {
@@ -37,6 +38,14 @@ class App extends Component {
     });
     return (
       <div className="tc">
+        <a
+          class="github-fork-ribbon right-top"
+          href="https://github.com/simonwhitaker/github-fork-ribbon-css"
+          data-ribbon="Fork me on GitHub"
+          title="Fork me on GitHub"
+        >
+          Fork me on GitHub
+        </a>
         <Header />
         {/* <CounterButton color={"red"} />
         <CounterButton2 color={"red"} /> */}
