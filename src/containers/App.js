@@ -3,10 +3,10 @@ import { connect } from "react-redux";
 import CardList from "../components/CardList";
 import SearchBox from "../components/SearchBox";
 import Scroll from "../components/Scroll";
+import "./gh-fork-ribbon.css";
 import "./App.css";
 import { setSearchField, requestRobots } from "../actions";
 import Header from "../components/Header";
-import "./gh-fork-ribbon.css";
 // import CounterButton from "../components/CounterButton";
 // import CounterButton2 from "../components/CounterButton2";
 
@@ -41,6 +41,7 @@ class App extends Component {
         <a
           class="github-fork-ribbon right-top"
           href="https://github.com/simonwhitaker/github-fork-ribbon-css"
+          target="_blank" rel="noreferrer"
           data-ribbon="Fork me on GitHub"
           title="Fork me on GitHub"
         >
