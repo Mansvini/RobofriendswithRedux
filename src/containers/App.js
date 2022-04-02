@@ -40,8 +40,9 @@ class App extends Component {
       <div className="tc">
         <a
           class="github-fork-ribbon right-top"
-          href="https://github.com/simonwhitaker/github-fork-ribbon-css"
-          target="_blank" rel="noreferrer"
+          href="https://github.com/Mansvini/RobofriendswithRedux"
+          target="_blank"
+          rel="noreferrer"
           data-ribbon="Fork me on GitHub"
           title="Fork me on GitHub"
         >
