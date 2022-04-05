@@ -39,7 +39,7 @@ class App extends Component {
     return (
       <div className="tc">
         <a
-          class="github-fork-ribbon right-top"
+          className="github-fork-ribbon right-top"
           href="https://github.com/Mansvini/RobofriendswithRedux"
           target="_blank"
           rel="noreferrer"
